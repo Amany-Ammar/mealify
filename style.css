@@ -1,0 +1,515 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: "Open Sans", sans-serif;
+}
+/* ---------header--------- */
+.nav{
+    background-color: white; 
+    padding: 30px 0; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0; 
+    filter: drop-shadow(0 0 5px #7a7a7a);
+    z-index: 1;
+
+}
+.nav-content{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-size: larger;
+}
+.logo h2 span{
+    color: red;
+}
+.list ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+.list ul li a{
+    text-decoration: none;
+    color: gray;
+    transition: color 0.5s;
+}
+.list ul li a:hover{
+    color: black;
+}
+.list ul li{
+    position: relative;
+    padding: 10px;
+}
+.list ul li::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff305b;
+    transition: 0.6s;
+}
+.list ul li:hover::after,
+.list ul li.active::after{
+    width: 100%;
+}
+.moon-icon{
+    align-self: center;
+    font-size: large;
+}
+/* -----head----- */
+.head{
+    background-color: #EEEEEE;
+    padding: 50px 0;
+}
+.head-content{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.head-text{
+    width: 40%;
+    align-content: center;
+}
+.head-text h1{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    margin: 20px 0;
+}
+.head-text p{
+    color: rgb(102, 102, 102);
+}
+.head-text .btns{
+    display: flex;
+    gap: 25px;
+    margin: 25px 0 ;
+}
+.head-text .btns .booking{
+    background-color: #E61414;
+    color: white;
+    width: 125px;
+    border: none;
+    height: 40px;
+    border-radius: 0 25px 25px 25px;
+    font-size: 15px;
+}
+.head-text .btns .video{
+    border: none;
+    background: none;
+    display: flex;
+    gap: 10px;
+}
+.head-text .btns .video i{
+    font-size: 35px;
+    color: white;
+    border: solid 6px #E61414;
+    border-radius: 50%;
+    background-color: rgb(17, 17, 46);
+}
+.head-text .btns .video p{
+    padding-top: 15px;
+    color: rgb(17, 17, 46);
+    font-size: 16px;
+}
+.btns .video:hover .vidP{
+    color: #E61414;
+}
+.btns .video:hover .vidI{
+    background-color: #E61414;
+}
+.head-img{
+    width: 40%;
+}
+.head-img img{
+    width: 100%;
+    filter: drop-shadow(0 0 15px #7a7a7a);
+}
+.head-img img:hover {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    1000% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* ------------chefs-------------- */
+.chefs{
+    margin: 70px 0;
+}
+.chefs h1, .chefs h1 span{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+}
+.chefs h1 span{
+    color: #E61414;
+}
+.chefs p{
+    color: gray;
+}
+.chefs .title{
+    text-align: center;
+}
+/* ---cards--- */
+.cards{
+    width: 85%;
+    margin: auto;
+    display: flex;
+}
+.cards .one-card{
+    width: 33.3%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: padding 0.5s;
+
+}
+.one-card:hover{
+    padding: 0;
+}
+.one-card:hover .icons{
+    left: 84%;
+    opacity: 1;
+}
+.one-card:hover .card-img>img{
+    width: 100%;
+}
+.one-card .card-img img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.one-card .card-img{
+    position: relative;
+    overflow: hidden;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    background-color: #efe9e27e;
+    padding: 15px;
+    gap: 15px;
+    font-size: 20px;
+    width: fit-content;
+    position: absolute;
+    top: 15px;
+    left: 100%;
+    border-radius: 10px;
+    transition: left 0.5s 0.2s;
+}
+.icons a i{
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.icons a i:hover{
+    opacity: 1;
+}
+.icons a{
+    color: rgb(2, 2, 43);
+}
+.cards .one-card .waves{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2px;
+}
+.card-text h3{
+    margin-top: 15px;
+}
+
+/* ----------gallery----------- */
+.gallery{
+    margin: 70px 0;
+    background-color: #EEEEEE;
+    padding: 50px 0;
+}
+.title h1, .title h1 span{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+}
+.title h1 span{
+    color: #E61414;
+}
+.title p{
+    color: gray;
+}
+.title{
+    text-align: center;
+}
+.gallery-img{
+    height: fit-content;
+}
+.photos{
+    width: 80%;
+    margin: 25px auto;
+    columns: 3;
+    column-gap: 10px;
+}
+.gallery-img{
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    position: relative;
+    border: 5px solid white;
+    overflow: hidden;
+}
+.gallery-img img{
+    max-width: 100%;
+}
+.gallery-img .meal-caption{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 1s;
+}
+
+.gallery-img:hover .meal-caption{
+    position: absolute;
+    top: 0;
+}
+
+/* -----------contact--------- */
+.map{
+    width: 80%;
+    margin:40px auto;
+}
+.contact-cards{
+    width: 80%;
+    margin: auto;
+    columns: 2;
+    column-gap: 10px;
+}
+.part{
+    background-color: #F5F5F5;
+    display: flex;
+    margin-bottom: 15px;
+    gap: 15px;
+    padding: 15px;
+}
+.part h3{
+    color: gray;
+    margin-bottom: 10px;
+}
+.part .i{
+    background-color: #CE1212;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* ------form------ */
+.contact-form{
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow:5px 5px 10px 10px rgba(214, 213, 213, 0.418);
+}
+.contact-form input{
+    height: 50px;
+}
+.contact-form input, .contact-form textarea{
+    border: 2px solid rgb(201, 199, 199);
+    padding: 15px;
+}
+.contact-form .inp-subject{
+    width: 100%;
+    margin: 15px 0;
+}
+.inp-group{
+    display: flex;
+    gap: 15px;
+}
+.inp-group input{
+    width: 50%;
+}
+
+.contact-form textarea{
+    width: 100%;
+    height: 150px;
+}
+.btn button{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: #CE1212;
+    border: none;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+.btn{
+    text-align: center;
+}
+
+/* ------------footer---------- */
+.footer{
+    background-color: #222121;
+    padding: 40px 0;
+    color: white;
+}
+.footer-content{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 15px;
+}
+.foot-logo{
+    display: flex;
+    gap: 10px;
+}
+.foot-logo img{
+    width: 40px;
+}
+.foot-logo{
+    align-items: center;
+}
+.foot-logo h1 span{
+    color: red;
+}
+.first{
+    width: 25%;
+    padding: 20px;
+}
+.first p{
+    margin: 15px 0;
+}
+.first h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.first hr{
+    border: 1px solid #686666;
+}
+.footer-icons{
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.second{
+    width: 50%;
+}
+.second h2{
+    margin: 15px 0;
+}
+.footer-form{
+    margin: 10px 0;
+}
+.footer-form input{
+    width: 75%;
+    height: 40px;
+    padding: 5px;
+}
+.footer-form button{
+    height: 40px;
+    padding: 5px;
+    background-color: #CE1212;
+    border: none;
+    color: white;
+    width: 24%;
+}
+.quick-links{
+    display: flex;
+}
+.quick-links .fcolumn, .quick-links .seccolumn{
+    width: 50%;
+}
+.quick-links p{
+    position: relative;
+    left: 0;
+    padding: 10px;
+    transition: background-color 0.3s, left 0.5s;
+}
+.quick-links p:hover{
+    background-color: rgba(0,0,0,.5);
+    left: 10px;
+}
+
+.third{
+    width: 25%;
+}
+.third h2{
+    margin: 15px 0;
+}
+.third .p_icon{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.third .p_icon i{
+    color: #CE1212;
+    font-size: 25px;
+}

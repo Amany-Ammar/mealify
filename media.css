@@ -1,0 +1,81 @@
+/* as8ar mn 640 */
+
+/* sm */
+@media (max-width: 640px) {
+    .list{
+        display: none;
+    }
+    
+    
+  }
+
+
+/* md */
+@media  (max-width: 768px) {
+    .cards{
+        flex-direction: column;
+        width: 80%;
+    }
+    .cards .one-card{
+        width: 100%;
+        margin: auto;
+    }
+    .footer-content{
+        flex-wrap: wrap;
+    }   
+    .first, .second, .third{
+        width: 100%;
+    }
+    .photos{
+        columns: 1;
+    }
+    .contact-cards{
+        columns: 1;
+        flex-direction: column;
+    }
+    .part{
+        width: 100%;
+    }
+    .head-content{
+        flex-direction: column-reverse;
+    }
+    .head-text{
+        width: 100%;
+        text-align: center;
+    }
+    .head-text .btns{
+        justify-content: center;
+    }
+    .head-img{
+        width: 100%;
+    }
+    .inp-group{
+        display: flex;
+        flex-direction: column;
+    }
+    .inp-group input{
+        width: 100%;
+    }
+}
+/* lg */
+@media  (min-width: 1024px) 
+{
+    
+    .photos{
+        columns: 2;
+    }
+}
+/* xl */
+@media  (min-width: 1280px) 
+{
+    .photos{
+        columns: 3;
+    }
+}
+/* lg */
+@media  (min-width: 1536px) 
+{
+    .photos{
+        columns: 3;
+    }
+}
